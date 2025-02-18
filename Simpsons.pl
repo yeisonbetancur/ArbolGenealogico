@@ -17,3 +17,19 @@ madre_de(marge, lisa).
 madre_de(marge, maggie).
 
 madre_de(selma, ling).
+
+% Definición de género
+es_hombre(abraham).
+es_hombre(homero).
+es_hombre(herbert).
+es_hombre(clancy).
+es_hombre(bart).
+
+es_mujer(mona).
+es_mujer(jacqueline).
+es_mujer(marge).
+es_mujer(patty).
+es_mujer(selma).
+es_mujer(lisa).
+es_mujer(maggie).
+es_mujer(ling).
