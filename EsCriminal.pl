@@ -1,3 +1,4 @@
-nacionalidad_de(colonel_west, estadounidense).
-enemigo_de(usa, corea_del_sur).
-vendio_armas_a(colonel_west, corea_del_sur).
+nacionalidad_de(coronel_west, estados_unidos).
+enemigo_de(corea_del_sur, estados_unidos).
+vender_armas_a(coronel_west, corea_del_sur).
+
