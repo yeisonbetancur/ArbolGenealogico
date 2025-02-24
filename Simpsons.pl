@@ -1,17 +1,20 @@
+%definicion de hechos. 
+%relaciones directas
+
 padre_de(abraham, homero).
 padre_de(abraham, herbert).
-madre_de(mona, homero).
-
 padre_de(clancy, marge).
 padre_de(clancy, patty).
 padre_de(clancy, selma).
-madre_de(jacqueline, marge).
-madre_de(jacqueline, patty).
-madre_de(jacqueline, selma).
-
 padre_de(homero, bart).
 padre_de(homero, lisa).
 padre_de(homero, maggie).
+
+
+madre_de(mona, homero).
+madre_de(jacqueline, marge).
+madre_de(jacqueline, patty).
+madre_de(jacqueline, selma).
 madre_de(marge, bart).
 madre_de(marge, lisa).
 madre_de(marge, maggie).
@@ -33,3 +36,11 @@ es_mujer(selma).
 es_mujer(lisa).
 es_mujer(maggie).
 es_mujer(ling).
+
+% definicion reglas. 
+% relaciones de mas de una generacion 
+
+abuelo_de(X,Y) :- padre_de(X,C), (padre_de(C,Y); madre_de(C,Y)).
+abuela_de(X,Y) :- madre_de(X,C), (madre_de(C,Y); padre_de(C, Y)).
+tio_de(X,Y) :- es_hombre(X),(padre_de(C, X), padre_de(C,Z), padre_de(Z, Y)), not(padre_de(X,Y)).
+tia_de(X,Y) :- es_mujer(X),(madre_de(S, X), madre_de(S,P), madre_de(P, Y)), not(madre_de(X,Y)).
